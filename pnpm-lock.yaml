@@ -23,6 +23,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.4.3
     version: 3.4.3(svelte@4.0.5)
+  svelte-cloudinary:
+    specifier: ^1.1.0
+    version: 1.1.0(svelte@4.0.5)
   typescript:
     specifier: ^5.0.0
     version: 5.0.2
@@ -38,6 +41,29 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.19
+    dev: true
+
+  /@cloudinary-util/url-loader@3.9.0:
+    resolution: {integrity: sha512-DJiu+a3Mr2GEyjAo4Gy2KWX0YoXoP0CFp2jvw8+3gJj7wvmIb7mcjRk1yHSGIyJcolb0uR+tWGO6KVhStpreMg==}
+    dependencies:
+      '@cloudinary-util/util': 2.1.0
+      '@cloudinary/url-gen': 1.11.2
+    dev: true
+
+  /@cloudinary-util/util@2.1.0:
+    resolution: {integrity: sha512-PGjVxyhhOP8IaD6uawXzfDnI8ArPqpiLfIXc8TEjhv3CGhDFBAM3dCT3xeAgg+92sQsx/AN74j+qckdWPfoO6w==}
+    dev: true
+
+  /@cloudinary/transformation-builder-sdk@1.6.1:
+    resolution: {integrity: sha512-cBoSFbE4SnXO2QvUq+cYgUpXufmZTgg05Cy+jAdiNRGcC6lN+KO0ybMnLU6yg9cFub2NRkBDpU4N53wg4a977w==}
+    dependencies:
+      '@cloudinary/url-gen': 1.11.2
+    dev: true
+
+  /@cloudinary/url-gen@1.11.2:
+    resolution: {integrity: sha512-9yL3BlThh3PfyRg/zS8cQVic3FdFaIOp361YrDrQ4fqYbYE47SGWF4ji9KoFxYF4ejfDEptayeG9jF2C465KRQ==}
+    dependencies:
+      '@cloudinary/transformation-builder-sdk': 1.6.1
     dev: true
 
   /@esbuild/android-arm64@0.18.20:
@@ -377,6 +403,23 @@ packages:
     resolution: {integrity: sha512-I469DU0UXNC1aHepwirWhu9YKg5fkxohZD95Ey/5A7lovC+Siu+MCLffva87lnfThaOrw9Vb1DUN5t55oULAAw==}
     dev: true
 
+  /@unpic/core@0.0.24:
+    resolution: {integrity: sha512-HFa7ry3iNYfIOkaWGb0N/w1sxt6MAyUfoXXOvjyz50vtomDUbxK4krcRcQWIca64bORQKncxeJbGETRQLF20WQ==}
+    dependencies:
+      unpic: 3.10.1
+    dev: true
+
+  /@unpic/svelte@0.0.25(svelte@4.0.5):
+    resolution: {integrity: sha512-jXyOl9BDfspJ03/kAeozy69eHjLtKIZjsZ4257mz8J/sn5Il3xsRD4vR701NjEC0fkkLQg9Xol+v92o0LGImtw==}
+    peerDependencies:
+      svelte: '*'
+    dependencies:
+      '@unpic/core': 0.0.24
+      style-object-to-css-string: 1.0.1
+      svelte: 4.0.5
+      unpic: 3.10.1
+    dev: true
+
   /acorn@8.10.0:
     resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
     engines: {node: '>=0.4.0'}
@@ -457,6 +500,24 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /cloudinary-core@2.13.0(lodash@4.17.21):
+    resolution: {integrity: sha512-Nt0Q5I2FtenmJghtC4YZ3MZZbGg1wLm84SsxcuVwZ83OyJqG9CNIGp86CiI6iDv3QobaqBUpOT7vg+HqY5HxEA==}
+    peerDependencies:
+      lodash: '>=4.0'
+    dependencies:
+      lodash: 4.17.21
+    dev: true
+
+  /cloudinary@1.41.0:
+    resolution: {integrity: sha512-qFf2McjvILJITePf4VF1PrY/8c2zy+/q5FVV6V3VWrP/gpIZsusPqXL4QZ6ZKXibPRukzMYqsQEhaSQgJHKKow==}
+    engines: {node: '>=0.6'}
+    dependencies:
+      cloudinary-core: 2.13.0(lodash@4.17.21)
+      core-js: 3.33.0
+      lodash: 4.17.21
+      q: 1.5.1
+    dev: true
+
   /code-red@1.0.4:
     resolution: {integrity: sha512-7qJWqItLA8/VPVlKJlFXU+NBlo/qyfs39aJcuMT/2ere32ZqvF5OSxgdM5xOfJJ7O429gg2HM47y8v9P+9wrNw==}
     dependencies:
@@ -474,6 +535,11 @@ packages:
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
+    dev: true
+
+  /core-js@3.33.0:
+    resolution: {integrity: sha512-HoZr92+ZjFEKar5HS6MC776gYslNOKHt75mEBKWKnPeFDpZ6nH5OeF3S6HFT1mUAUZKrzkez05VboaX8myjSuw==}
+    requiresBuild: true
     dev: true
 
   /css-tree@2.3.1:
@@ -679,6 +745,10 @@ packages:
     resolution: {integrity: sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==}
     dev: true
 
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: true
+
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -823,6 +893,11 @@ packages:
     hasBin: true
     dev: true
 
+  /q@1.5.1:
+    resolution: {integrity: sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==}
+    engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
+    dev: true
+
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
@@ -921,6 +996,10 @@ packages:
       min-indent: 1.0.1
     dev: true
 
+  /style-object-to-css-string@1.0.1:
+    resolution: {integrity: sha512-ci7tySCofUqq86WziXoEsIE/aGZ2rkw7mmz6Afklhbmk7i05Z1d8hSUaJMUWUOJPbsvK+7TW5ulklZm55/S44Q==}
+    dev: true
+
   /svelte-check@3.4.3(svelte@4.0.5):
     resolution: {integrity: sha512-O07soQFY3X0VDt+bcGc6D5naz0cLtjwnmNP9JsEBPVyMemFEqUhL2OdLqvkl5H/u8Jwm50EiAU4BPRn5iin/kg==}
     hasBin: true
@@ -946,6 +1025,19 @@ packages:
       - sass
       - stylus
       - sugarss
+    dev: true
+
+  /svelte-cloudinary@1.1.0(svelte@4.0.5):
+    resolution: {integrity: sha512-54QvNw89b3jdvLS7VU/nYF39X7TvgwXvh3szLuf1x5DEUmnoGcSnSK2NWbrsNCyNpggnLhcmxbWHZINQMDQO4Q==}
+    peerDependencies:
+      svelte: ^3.0.0 || ^4.0.0
+    dependencies:
+      '@cloudinary-util/url-loader': 3.9.0
+      '@cloudinary-util/util': 2.1.0
+      '@unpic/core': 0.0.24
+      '@unpic/svelte': 0.0.25(svelte@4.0.5)
+      cloudinary: 1.41.0
+      svelte: 4.0.5
     dev: true
 
   /svelte-hmr@0.15.3(svelte@4.0.5):
@@ -1052,6 +1144,10 @@ packages:
     engines: {node: '>=14.0'}
     dependencies:
       busboy: 1.6.0
+    dev: true
+
+  /unpic@3.10.1:
+    resolution: {integrity: sha512-7mmLrd6RWdt2Sp015Fgf80oKBmHIEwIDXBQJIImJ/Mj/XaDrOlzX/CWmiRoXOXYj9bLNq0MryOxosMmNXrBOGA==}
     dev: true
 
   /vite@4.4.2:
