@@ -10,6 +10,8 @@ You'll need to create a `.env` with your Cloudinary Cloud Name.
 VITE_PUBLIC_CLOUDINARY_CLOUD_NAME="CLOUD NAME GOES HERE"
 ```
 
+To see the image used in the demo, set "dimxnfwwf" as the cloud name.
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
